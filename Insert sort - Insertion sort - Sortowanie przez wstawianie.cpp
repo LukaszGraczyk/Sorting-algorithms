@@ -3,37 +3,37 @@
 #include <iomanip>
 using namespace std;
 
-void InsertSort (int tab[], int rozm)
+void InsertSort (int tabablica[], int rozmiar)
 
 {
-    for(int i=1; i<rozm; i++)
+    for(int i=1; i<rozmiar; i++)
     {
-        int temp=tab[i];
+        int temp=tabablica[i];
         int j=i-1;
-        while(j>=0 && tab[j]>temp)
+        while(j>=0 && tabablica[j]>temp)
         {
-            tab[j+1]=tab[j];
+            tabablica[j+1]=tabablica[j];
             j--;
         }
-        tab[j+1]=temp;
+        tabablica[j+1]=temp;
     }
 }
 
 int main()
 {
-    int rozm = 100;
-    int *tab = new int[rozm];
+    int rozmiar = 100;
+    int *tablica = new int[rozmiar];
 
-    for (int i=0; i<rozm; i++)
+    for (int i=0; i<rozmiar; i++)
     {
-        tab[i]=rand()%rozm;
+        tablica[i]=rand()%rozmiar;
     }
 
-    InsertSort(tab, rozm);
+    InsertSort(tablica, rozmiar);
 
-    for (int i=1; i<rozm; i++)
+    for (int i=1; i<rozmiar; i++)
     {
-        cout<<tab[i]<<endl;
+        cout<<tablica[i]<<endl;
     }
 
     return 0;
